@@ -1,0 +1,1 @@
+This ZIP is a placeholder for your Netlify static site.
