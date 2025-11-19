@@ -4,10 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <!-- Dawn / Shopify theme CSS you copied -->
+  <!-- Fonts / basic resets -->
   <link rel="stylesheet" href="/assets/theme.css">
-
-  <!-- Custom layout CSS for header/hero/product grid/footer -->
+  <!-- Layout + colours for this static site -->
   <link rel="stylesheet" href="/assets/styles.css">
 
   <title>Fast-Growing Willow Cuttings &amp; Living Structures | Earls Colne Farm</title>
@@ -21,11 +20,9 @@
 </head>
 <body>
   <header class="header">
-    <h1>
-      <a href="/" style="color:white;text-decoration:none;">
-        Earls Colne Farm
-      </a>
-    </h1>
+    <div class="header-left">
+      <a href="/" class="logo">Earls Colne Farm</a>
+    </div>
     <nav class="nav">
       <a href="/products/index.html">Shop willows</a>
       <a href="/about.html">About</a>
@@ -35,27 +32,78 @@
 
   <main class="main">
 
-    <!-- Hero section -->
+    <!-- HERO: intro + three feature tiles (Lavender / Asparagus / Living Willow) -->
     <section class="hero">
-      <div>
-        <div class="hero-tag">Willow cuttings &amp; living structures</div>
-        <h2>Plant fast-growing willows for screens, domes &amp; shelters</h2>
-        <p>
-          Earls Colne Farm supplies vigorous hybrid willow cuttings and whips, ideal for
-          living structures, windbreaks, screening and small-scale biomass.
-          Grown in Essex and shipped across the UK.
+      <div class="hero-main">
+        <p class="hero-tag">For all your horticultural needs</p>
+        <h1 class="hero-heading">Earls Colne Farm</h1>
+        <p class="hero-subheading">
+          Based in Essex, we have been running since 2010, providing a wide variety of plants,
+          trees and cuttings to customers across the UK.
         </p>
         <div class="hero-cta">
           <a class="btn-primary" href="/products/index.html">Browse willow cuttings</a>
           <a class="btn-secondary" href="/about.html">Learn about the farm</a>
         </div>
+        <p class="hero-note">
+          For information about our shipping rates and other FAQs, please see our FAQs page on the main shop.
+        </p>
       </div>
-      <div class="hero-img" role="img" aria-label="Rows of willow trees in a field"></div>
+
+      <div class="hero-tiles">
+        <article class="hero-tile">
+          <img
+            src="https://www.earlscolnefarm.com/cdn/shop/files/edelweiss_300x.jpg?v=1614293867"
+            alt="Lavender at Earls Colne Farm"
+            loading="lazy"
+          />
+          <div class="hero-tile-label">Lavender</div>
+        </article>
+
+        <article class="hero-tile">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0277/8343/0284/products/asparagus_plants.jpg?v=1"
+            alt="Asparagus plants at Earls Colne Farm"
+            loading="lazy"
+          />
+          <div class="hero-tile-label">Asparagus Plants</div>
+        </article>
+
+        <article class="hero-tile">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0277/8343/0284/files/Willow_cutting_bundles_0253fee6-3184-4f65-bbef-e97b1e6af634.jpg?v=1709224555"
+            alt="Living willow cuttings at Earls Colne Farm"
+            loading="lazy"
+          />
+          <div class="hero-tile-label">Living Willow Cuttings</div>
+        </article>
+      </div>
     </section>
 
-    <!-- Featured products -->
-    <section>
-      <h3 class="section-title">Featured products</h3>
+    <!-- Newsletter-style block -->
+    <section class="newsletter">
+      <h2>Subscribe to our newsletter</h2>
+      <p>
+        Be the first to know about new offers, seasonal plants and updates from Earls Colne Farm.
+      </p>
+      <div class="newsletter-box">
+        <input
+          type="email"
+          name="email"
+          placeholder="Email address"
+          aria-label="Email address"
+          disabled
+        />
+        <button type="button" disabled>Subscribe</button>
+      </div>
+      <p class="newsletter-note">
+        (This is a static site – hook this up to your email provider or Formspree when you’re ready.)
+      </p>
+    </section>
+
+    <!-- Featured willow products -->
+    <section class="featured">
+      <h2 class="section-title">Featured willow products</h2>
       <div class="product-grid">
 
         <article class="product-card">
@@ -67,9 +115,9 @@
             />
           </a>
           <div class="product-card-body">
-            <h4 class="product-card-title">
+            <h3 class="product-card-title">
               <a href="/products/pack-of-willows.html">Pack of willows</a>
-            </h4>
+            </h3>
             <div class="product-card-meta">Willows</div>
             <div class="product-card-price">£20</div>
           </div>
@@ -88,11 +136,11 @@
             />
           </a>
           <div class="product-card-body">
-            <h4 class="product-card-title">
+            <h3 class="product-card-title">
               <a href="/products/50-longer-2ft-60cm-long-hybrid-willow-cuttings-for-hedging-logs-biomass.html">
                 100 Longer 2ft 60cm Long Hybrid Willow Cuttings For Hedging, Logs, Biomass
               </a>
-            </h4>
+            </h3>
             <div class="product-card-meta">Willows</div>
             <div class="product-card-price">£95</div>
           </div>
@@ -111,11 +159,11 @@
             />
           </a>
           <div class="product-card-body">
-            <h4 class="product-card-title">
+            <h3 class="product-card-title">
               <a href="/products/1-x-8ft-2-5m-fast-growing-hybrid-willow-whips-perfect-for-living-structures.html">
                 1 x 8ft (2.5m) Fast Growing Hybrid Willow Whips (Perfect for Living Structures)
               </a>
-            </h4>
+            </h3>
             <div class="product-card-meta">Willows</div>
             <div class="product-card-price">£3</div>
           </div>
@@ -129,16 +177,16 @@
           <a href="/products/willow-cuttings-100-98-ft-3m-hedging-screening-living-structures-1.html">
             <img
               src="https://cdn.shopify.com/s/files/1/0277/8343/0284/files/Longwillowcuttings_928e8aeb-5223-4590-b3a9-6fd32a747059.jpg?v=1706108878"
-              alt="Willow Cuttings 100 ~9&#x27;8&quot; ft / 3m -hedging,screening,living structures"
+              alt="Willow Cuttings 100 ~9'8&quot; ft / 3m -hedging,screening,living structures"
               loading="lazy"
             />
           </a>
           <div class="product-card-body">
-            <h4 class="product-card-title">
+            <h3 class="product-card-title">
               <a href="/products/willow-cuttings-100-98-ft-3m-hedging-screening-living-structures-1.html">
-                Willow Cuttings 100 ~9&#x27;8&quot; ft / 3m -hedging,screening,living structures
+                Willow Cuttings 100 ~9'8&quot; ft / 3m -hedging,screening,living structures
               </a>
-            </h4>
+            </h3>
             <div class="product-card-meta">Willows</div>
             <div class="product-card-price">£280</div>
           </div>
