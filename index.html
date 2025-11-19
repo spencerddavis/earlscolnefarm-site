@@ -6,7 +6,7 @@
 
   <!-- Fonts / basic resets -->
   <link rel="stylesheet" href="/assets/theme.css">
-  <!-- Layout + colours for this static site -->
+  <!-- Layout + colours -->
   <link rel="stylesheet" href="/assets/styles.css">
 
   <title>Fast-Growing Willow Cuttings &amp; Living Structures | Earls Colne Farm</title>
@@ -20,9 +20,7 @@
 </head>
 <body>
   <header class="header">
-    <div class="header-left">
-      <a href="/" class="logo">Earls Colne Farm</a>
-    </div>
+    <a href="/" class="logo">Earls Colne Farm</a>
     <nav class="nav">
       <a href="/products/index.html">Shop willows</a>
       <a href="/about.html">About</a>
@@ -32,72 +30,110 @@
 
   <main class="main">
 
-    <!-- HERO: intro + three feature tiles (Lavender / Asparagus / Living Willow) -->
-    <section class="hero">
-      <div class="hero-main">
-        <p class="hero-tag">For all your horticultural needs</p>
-        <h1 class="hero-heading">Earls Colne Farm</h1>
-        <p class="hero-subheading">
-          Based in Essex, we have been running since 2010, providing a wide variety of plants,
-          trees and cuttings to customers across the UK.
-        </p>
-        <div class="hero-cta">
-          <a class="btn-primary" href="/products/index.html">Browse willow cuttings</a>
-          <a class="btn-secondary" href="/about.html">Learn about the farm</a>
+    <!-- HERO SLIDER -->
+    <section class="hero-slider">
+      <!-- Slide 1: Living willow -->
+      <div class="hero-slide is-active" data-slide="0">
+        <div class="hero-slide-bg"
+             style="background-image:url('https://cdn.shopify.com/s/files/1/0277/8343/0284/files/Willow_cutting_bundles_0253fee6-3184-4f65-bbef-e97b1e6af634.jpg?v=1709224555');">
         </div>
-        <p class="hero-note">
-          For information about our shipping rates and other FAQs, please see our FAQs page on the main shop.
-        </p>
+        <div class="hero-slide-overlay"></div>
+        <div class="hero-slide-content">
+          <p class="hero-tag">Living willow cuttings</p>
+          <h1 class="hero-heading">Fast-growing hybrid willows</h1>
+          <p class="hero-subheading">
+            Create living tunnels, domes and screens with vigorous hybrid willow cuttings,
+            grown in Essex and shipped across the UK.
+          </p>
+          <div class="hero-cta">
+            <a class="btn-primary" href="/products/index.html">Shop willow cuttings</a>
+            <a class="btn-secondary" href="/about.html">About Earls Colne Farm</a>
+          </div>
+        </div>
       </div>
 
-      <div class="hero-tiles">
-        <article class="hero-tile">
-          <img
-            src="https://www.earlscolnefarm.com/cdn/shop/files/edelweiss_300x.jpg?v=1614293867"
-            alt="Lavender at Earls Colne Farm"
-            loading="lazy"
-          />
-          <div class="hero-tile-label">Lavender</div>
-        </article>
+      <!-- Slide 2: Lavender -->
+      <div class="hero-slide" data-slide="1">
+        <div class="hero-slide-bg"
+             style="background-image:url('https://www.earlscolnefarm.com/cdn/shop/files/edelweiss_300x.jpg?v=1614293867');">
+        </div>
+        <div class="hero-slide-overlay"></div>
+        <div class="hero-slide-content">
+          <p class="hero-tag">Lavender &amp; perennials</p>
+          <h1 class="hero-heading">Fragrant, bee-friendly borders</h1>
+          <p class="hero-subheading">
+            Lavender and cottage-garden favourites to bring scent, colour and pollinators
+            into your beds and borders.
+          </p>
+          <div class="hero-cta">
+            <a class="btn-primary" href="#">Lavender range (via main shop)</a>
+          </div>
+        </div>
+      </div>
 
-        <article class="hero-tile">
-          <img
-            src="https://cdn.shopify.com/s/files/1/0277/8343/0284/products/asparagus_plants.jpg?v=1"
-            alt="Asparagus plants at Earls Colne Farm"
-            loading="lazy"
-          />
-          <div class="hero-tile-label">Asparagus Plants</div>
-        </article>
+      <!-- Slide 3: Asparagus -->
+      <div class="hero-slide" data-slide="2">
+        <div class="hero-slide-bg"
+             style="background-image:url('https://images.pexels.com/photos/5865360/pexels-photo-5865360.jpeg?auto=compress&cs=tinysrgb&w=1600');">
+        </div>
+        <div class="hero-slide-overlay"></div>
+        <div class="hero-slide-content">
+          <p class="hero-tag">Asparagus plants</p>
+          <h1 class="hero-heading">Long-lived asparagus beds</h1>
+          <p class="hero-subheading">
+            Establish a productive asparagus bed with strong crowns and clear planting advice
+            from a working Essex farm.
+          </p>
+          <div class="hero-cta">
+            <a class="btn-primary" href="#">Asparagus plants (seasonal)</a>
+          </div>
+        </div>
+      </div>
 
-        <article class="hero-tile">
-          <img
-            src="https://cdn.shopify.com/s/files/1/0277/8343/0284/files/Willow_cutting_bundles_0253fee6-3184-4f65-bbef-e97b1e6af634.jpg?v=1709224555"
-            alt="Living willow cuttings at Earls Colne Farm"
-            loading="lazy"
-          />
-          <div class="hero-tile-label">Living Willow Cuttings</div>
-        </article>
+      <!-- Slider controls -->
+      <button class="hero-nav hero-nav-prev" type="button" aria-label="Previous slide">‹</button>
+      <button class="hero-nav hero-nav-next" type="button" aria-label="Next slide">›</button>
+
+      <div class="hero-dots" aria-hidden="true">
+        <button class="hero-dot is-active" data-target="0"></button>
+        <button class="hero-dot" data-target="1"></button>
+        <button class="hero-dot" data-target="2"></button>
       </div>
     </section>
 
-    <!-- Newsletter-style block -->
+    <!-- Intro + newsletter (similar to Shopify copy) -->
     <section class="newsletter">
-      <h2>Subscribe to our newsletter</h2>
+      <h2>Earls Colne Farm</h2>
       <p>
-        Be the first to know about new offers, seasonal plants and updates from Earls Colne Farm.
+        Based in Essex, we have been running since 2010, providing a wide variety of plants,
+        trees and cuttings to customers across the UK.
       </p>
-      <div class="newsletter-box">
-        <input
-          type="email"
-          name="email"
-          placeholder="Email address"
-          aria-label="Email address"
-          disabled
-        />
-        <button type="button" disabled>Subscribe</button>
+      <p>
+        For information about our shipping rates and other FAQs, please see the FAQs page
+        on our main shop.
+      </p>
+
+      <div class="newsletter-inner">
+        <div>
+          <h3>Subscribe to our newsletter</h3>
+          <p>
+            Be the first to know about new offers, seasonal plants and updates from the farm.
+          </p>
+        </div>
+        <form class="newsletter-box" action="#" method="post">
+          <input
+            type="email"
+            name="email"
+            placeholder="Email address"
+            aria-label="Email address"
+            disabled
+          />
+          <button type="button" disabled>Subscribe</button>
+        </form>
       </div>
       <p class="newsletter-note">
-        (This is a static site – hook this up to your email provider or Formspree when you’re ready.)
+        This static site doesn’t send emails yet – connect it to your email provider
+        (e.g. MailerLite, Mailchimp, or Formspree) when you’re ready.
       </p>
     </section>
 
@@ -204,5 +240,67 @@
   <footer class="footer">
     Living willow structures &amp; cuttings grown in Essex, UK. Ships nationwide.
   </footer>
+
+  <script>
+    (function () {
+      const slides = Array.from(document.querySelectorAll('.hero-slide'));
+      const dots = Array.from(document.querySelectorAll('.hero-dot'));
+      const prevBtn = document.querySelector('.hero-nav-prev');
+      const nextBtn = document.querySelector('.hero-nav-next');
+
+      let current = 0;
+      let timer = null;
+      const INTERVAL = 6000;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle('is-active', i === index);
+        });
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('is-active', i === index);
+        });
+        current = index;
+      }
+
+      function nextSlide() {
+        const next = (current + 1) % slides.length;
+        showSlide(next);
+      }
+
+      function prevSlide() {
+        const prev = (current - 1 + slides.length) % slides.length;
+        showSlide(prev);
+      }
+
+      function resetTimer() {
+        if (timer) clearInterval(timer);
+        timer = setInterval(nextSlide, INTERVAL);
+      }
+
+      if (slides.length) {
+        resetTimer();
+
+        if (nextBtn) {
+          nextBtn.addEventListener('click', () => {
+            nextSlide();
+            resetTimer();
+          });
+        }
+        if (prevBtn) {
+          prevBtn.addEventListener('click', () => {
+            prevSlide();
+            resetTimer();
+          });
+        }
+
+        dots.forEach((dot, idx) => {
+          dot.addEventListener('click', () => {
+            showSlide(idx);
+            resetTimer();
+          });
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
