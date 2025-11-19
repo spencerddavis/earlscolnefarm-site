@@ -35,17 +35,22 @@ body {
   padding: 1.5rem 1.25rem 2.5rem;
 }
 
-/* HERO SLIDER */
+/* HERO SLIDER – full width, big image */
 .hero-slider {
   position: relative;
+  /* break out of the .main container and go full viewport width */
   margin: 0 auto 2.5rem;
-  max-width: 1100px;
-  border-radius: 16px;
+  max-width: none;
+  width: 100vw;
+  left: 50%;
+  margin-left: -50vw;
+  border-radius: 0;
   overflow: hidden;
   box-shadow: 0 14px 40px rgba(15, 23, 42, 0.25);
   background: #000;
-  min-height: 260px;
+  min-height: 500px;
 }
+
 .hero-slide {
   position: absolute;
   inset: 0;
@@ -59,24 +64,27 @@ body {
   transform: scale(1);
   pointer-events: auto;
 }
+
 .hero-slide-bg {
   position: absolute;
   inset: 0;
   background-size: cover;
-  background-position: center;
+  background-position: center center;
 }
 .hero-slide-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 15% 20%, rgba(255,255,255,0.18), transparent 60%),
-              linear-gradient(to right, rgba(15,23,42,0.9), rgba(15,23,42,0.2));
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255,255,255,0.18), transparent 60%),
+    linear-gradient(to right, rgba(15,23,42,0.9), rgba(15,23,42,0.2));
 }
+
 .hero-slide-content {
   position: relative;
   z-index: 1;
   height: 100%;
-  padding: 1.8rem 2.1rem;
-  max-width: 540px;
+  padding: 2.5rem 3rem;
+  max-width: 580px;
   color: #e5e7eb;
   display: flex;
   flex-direction: column;
@@ -93,12 +101,12 @@ body {
   color: #e5e7eb;
 }
 .hero-heading {
-  font-size: 2rem;
+  font-size: 2.4rem;
   color: #f9fafb;
 }
 .hero-subheading {
-  font-size: 0.98rem;
-  line-height: 1.6;
+  font-size: 1.1rem;
+  line-height: 1.65;
   color: #e5e7eb;
 }
 .hero-cta {
@@ -299,11 +307,17 @@ body {
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
+  .hero-slider {
+    min-height: 400px;
+  }
   .hero-slide-content {
-    padding: 1.5rem 1.4rem;
+    padding: 1.8rem 2rem;
   }
   .hero-heading {
-    font-size: 1.7rem;
+    font-size: 1.9rem;
+  }
+  .hero-subheading {
+    font-size: 1rem;
   }
   .newsletter-inner {
     grid-template-columns: minmax(0, 1fr);
@@ -314,11 +328,18 @@ body {
   .main {
     padding-inline: 1rem;
   }
+
   .hero-slider {
-    border-radius: 0;
-    margin-inline: -1rem;
+    width: 100%;
+    left: 0;
+    margin-left: 0;
+    min-height: 300px;
   }
+
   .hero-slide-content {
     padding: 1.3rem 1.1rem;
+  }
+  .hero-heading {
+    font-size: 1.7rem;
   }
 }
