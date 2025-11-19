@@ -1,1 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <!-- CSS from your site -->
+  <link rel="stylesheet" href="../assets/theme.css">
+  <link rel="stylesheet" href="../assets/styles.css">
+
+  <title>100 × 30cm Willow Cuttings | Earls Colne Farm</title>
+  <meta name="description" content="Buy packs of 100 × 30cm hybrid willow cuttings grown at Earls Colne Farm, perfect for screens, fedges and small living structures." />
+
+  <style>
+    /* Simple slider styling */
+    .product-slider {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+    .product-slide {
+      display: none;
+      width: 100%;
+    }
+    .product-slide.is-active {
+      display: block;
+    }
+    .product-slide img {
+      width: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+    .slider-dots {
+      display: flex;
+      gap: 6px;
+      margin-top: 8px;
+    }
+    .slider-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 1px solid #0b7285;
+      cursor: pointer;
+    }
+    .slider-dot.is-active {
+      background: #0b7285;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <a href="../index.html" class="logo">
+      <img src="../assets/3426_Earls_Colne_Farm-Master_Logo-2-1.jpg"
+           alt="Earls Colne Farm logo"
+           style="height:40px; vertical-align:middle;">
+    </a>
+    <nav class="nav">
+      <a href="../shop.html">Shop willows</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="main">
+
+    <nav class="breadcrumbs">
+      <a href="../index.html">Home</a> ›
+      <a href="../shop.html">Shop willows</a> ›
+      30cm Willow Cuttings
+    </nav>
+
+    <section class="product-layout">
+
+      <!-- IMAGE SLIDER -->
+      <div class="product-slider" id="slider">
+        <div class="product-slide is-active">
+          <img src="../assets/Willow_cuttings_2.jpg"
+               alt="30cm willow cuttings - image 1">
+        </div>
+        <div class="product-slide">
+          <img src="../assets/willow_cuttings_1.jpg"
+               alt="30cm willow cuttings - image 2">
+        </div>
+
+        <div class="slider-dots" id="sliderDots">
+          <div class="slider-dot is-active" data-slide="0"></div>
+          <div class="slider-dot" data-slide="1"></div>
+        </div>
+      </div>
+
+      <!-- PRODUCT INFO -->
+      <div>
+        <h1 class="product-main-title">100 × 30cm Willow Cuttings</h1>
+
+        <p class="product-price">£X (your price here)</p>
+
+        <p class="product-meta">
+          Hybrid willow cuttings · Approx. 30cm length  
+          <br>Grown in Essex · Shipped across the UK
+        </p>
+
+        <div class="product-cta-box">
+          <strong>Buy securely online</strong>
+          <p>
+            These willow cuttings can be ordered online using Stripe’s secure checkout.
+            Click the button below to complete your purchase.
+          </p>
+
+          <!-- Replace # with your Stripe payment link -->
+          <p>
+            <a class="btn-primary" href="#" target="_blank" rel="noopener">
+              Buy now via secure checkout
+            </a>
+          </p>
+        </div>
+
+        <div class="product-description">
+          <h2>About these willow cuttings</h2>
+          <p>
+            Packs of 100 hybrid willow cuttings, each approximately <strong>30cm long</strong>.
+            These are ideal for:
+          </p>
+          <ul>
+            <li>Living willow screening</li>
+            <li>Small fedges (living fences)</li>
+            <li>Windbreaks and privacy lines</li>
+            <li>School and garden projects</li>
+          </ul>
+
+          <h3>Planting instructions</h3>
+          <p>
+            Plant each cutting around <strong>15–20cm deep</strong> into moist soil, leaving
+            at least 2 buds above the surface. Keep well-watered for the first season and
+            remove competing weeds around the base.
+          </p>
+
+          <h3>Shipping</h3>
+          <p>
+            Cuttings are bundled and shipped nationwide. Orders typically dispatch within 2–4 working days.
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    Living willow structures &amp; cuttings grown in Essex, UK. Ships nationwide.
+  </footer>
+
+  <script>
+    // Simple auto-rotating slider
+    const slides = [...document.querySelectorAll('.product-slide')];
+    const dots = [...document.querySelectorAll('.slider-dot')];
+    let current = 0;
+
+    function showSlide(i) {
+      slides.forEach((s, idx) => s.classList.toggle('is-active', idx === i));
+      dots.forEach((d, idx) => d.classList.toggle('is-active', idx === i));
+      current = i;
+    }
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        showSlide(parseInt(dot.dataset.slide, 10));
+      });
+    });
+
+    setInterval(() => {
+      const next = (current + 1) % slides.length;
+      showSlide(next);
+    }, 5000);
+  </script>
+
+</body>
+</html>
